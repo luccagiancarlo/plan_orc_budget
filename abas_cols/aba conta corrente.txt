@@ -1,0 +1,27 @@
+Colunas da aba: aba conta corrente
+===============================
+CodBanco
+Nome
+CodAgencia
+CodConta
+CodFilial
+Data
+NumLancamento
+Descricao
+Valor
+Tipo
+UserCodigo
+UserNome
+Documento
+PContaCodigo
+PContaDescricao
+PContaSubCodigo
+PContaSubDescricao
+Conciliado
+FormaPgtoCodigo
+FormaPgtoDescricao
+DataLcto
+DataLctoEfetiva
+DataCompetencia
+CodEstruturaOrganizacional
+CodPlanoConta

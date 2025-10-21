@@ -1,0 +1,7 @@
+Colunas da aba: Planilha3
+======================
+Unnamed: 0
+Unnamed: 1
+META
+OVER
+SUPER

@@ -1,0 +1,10 @@
+Colunas da aba: plano de contas
+============================
+ID
+Descricao
+IDParent
+NivelGeral
+Sequencia
+FlagNivel
+Ativo
+Coluna1

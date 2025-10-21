@@ -1,0 +1,3 @@
+Colunas da aba: Planilha1
+======================
+ORÇAMENTO DE RECEITA E MARGEM [BASE]

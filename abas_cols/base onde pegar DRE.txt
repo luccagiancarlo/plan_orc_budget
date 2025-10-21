@@ -1,0 +1,3 @@
+Colunas da aba: base onde pegar DRE
+================================
+(Nenhuma coluna detectada ou aba vazia)

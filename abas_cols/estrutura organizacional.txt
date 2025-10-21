@@ -1,0 +1,9 @@
+Colunas da aba: estrutura organizacional
+=====================================
+ID
+Descricao
+IDParent
+NivelGeral
+Sequencia
+FlagNivel
+Ativo

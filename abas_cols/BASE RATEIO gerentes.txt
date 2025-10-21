@@ -1,0 +1,5 @@
+Colunas da aba: BASE RATEIO gerentes
+=================================
+Unnamed: 0
+Unnamed: 1
+0.25

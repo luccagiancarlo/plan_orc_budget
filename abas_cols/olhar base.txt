@@ -1,0 +1,29 @@
+Colunas da aba: olhar base
+=======================
+Unnamed: 0
+AAAAAA
+Unnamed: 2
+Unnamed: 3
+0.07
+Unnamed: 5
+0.06
+Unnamed: 7
+0.1
+Unnamed: 9
+0.1.1
+Unnamed: 11
+0.06.1
+Unnamed: 13
+0.08
+Unnamed: 15
+0.09
+Unnamed: 17
+0.09.1
+Unnamed: 19
+0.08.1
+Unnamed: 21
+0.09.2
+Unnamed: 23
+0.1.2
+Unnamed: 25
+0.08.2
