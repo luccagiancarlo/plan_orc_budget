@@ -137,13 +137,28 @@ def extrair_dados_aba(excel_path: Path, sheet_name: str, cd_empresa: int) -> pd.
     for idx in range(len(df_raw)):
         row = df_raw.iloc[idx]
 
-        # Detecta código de unidade na coluna 0 (quando coluna 1 está vazia e coluna 0 tem número)
+        # Detecta código de unidade:
+        # - Padrão 1: coluna 0 tem número e coluna 1 está vazia
+        # - Padrão 2: coluna 0 está vazia, coluna 1 tem número e coluna 2 não parece código de conta
+        #   (ex: Base fixo Uniplast onde col1=5, col2="Gestão da Presidência")
         if pd.notna(row[0]) and pd.isna(row[1]):
             try:
                 cod_unidade_atual = int(row[0])
+                continue
             except (ValueError, TypeError):
                 pass
-            continue
+
+        if pd.isna(row[0]) and pd.notna(row[1]):
+            try:
+                cod_unidade_candidato = int(row[1])
+                # Verifica se col2 não parece ser um código de conta (não tem padrão de números com pontos)
+                col2_str = str(row[2]) if pd.notna(row[2]) else ''
+                # Se col2 não tem padrão de conta (ex: "04.01.01.01"), então col1 é cod_unidade
+                if not conta_pattern.search(col2_str):
+                    cod_unidade_atual = cod_unidade_candidato
+                    continue
+            except (ValueError, TypeError):
+                pass
 
         # Verifica se tem dados nas colunas 1 (COD) e 2 (CONTA)
         if pd.isna(row[1]) or pd.isna(row[2]):
