@@ -159,6 +159,23 @@ Features:
 - Formatted table output with company/unit grouping
 - Shows applied filters in header
 
+### 6. imp_cad_receita.py
+Imports the "CADASTRO RECEITA" (revenue catalog) sheet to MySQL.
+
+```bash
+python imp_cad_receita.py
+python imp_cad_receita.py --excel orc_2026.xlsx --sheet "CADASTRO RECEITA"
+```
+
+Features:
+- Imports 222 product records across 5 companies into val_orc_cad_rec_temp
+- Handles complex layout with headers on row 4 and multiple header repetitions
+- Applies forward fill for company data on additional product rows
+- Filters out repeated headers and invalid data rows
+- Defensive type conversion with error handling
+- Always drops and recreates val_orc_cad_rec_temp table
+- Distribution: Distribuidora (22), UNIBOX (44), INDUSTRIA MÁSCARA (4), UNIPLAST (66), UNIPACK (86)
+
 ## Database Schema
 
 Key tables:
@@ -167,6 +184,7 @@ Key tables:
 - **imp_base_fixo**: Imported budget base (cod_interno, cod_unidade, monthly values)
 - **val_orc_lancamentos**: Production budget entries (cd_lancamento, cd_conta, cd_unidade, nu_mes, vl_lancamento)
 - **val_orc_unidade**: Organizational units (cd_unidade, de_unidade)
+- **val_orc_cad_rec_temp**: Temporary revenue catalog (nro_conta, conta_contabil, cd_empresa, nome_empresa, cod_produto, nome_produto, cod_venda)
 
 Database connection (all scripts):
 - Host: 127.0.0.1
